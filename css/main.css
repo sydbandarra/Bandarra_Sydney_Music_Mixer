@@ -1,0 +1,245 @@
+.hidden {
+    display: none;
+}
+
+/*reset brower settings*/
+* /* * selector selects all tags*/ {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+html, body /*select both html and body element and giving it a heigh of 100%= content will fill browser height*/{
+    height: 100%;
+}
+
+body {
+    /*style text*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #070535;
+    font-size: 16pt;
+    /*style background*/
+    background-image: url(../images/background.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+body h2 {
+    font-size: 28pt;
+}
+
+body article ul li {
+    font-size: 16pt;
+    list-style-type: none;
+    line-height: 22pt;
+}
+
+header {
+    background-color: #e6b581;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    padding-right: 60px;
+    z-index: 2;
+    display: flex; /*forces logo to display in a row with the nav element taking up only as much space as needed*/
+}
+
+header nav {
+    margin-left: auto; /*pushes the nav to the far side on the header flex container*/
+}
+
+header nav ul {
+    list-style-type: none; 
+}
+
+header nav ul li {
+    display: inline; /*makes the list items display beside eachother instead of stacking*/
+    margin: 0 20px; /*spread out the items*/
+    cursor: pointer;
+    font-size: 20pt;
+}
+
+header li:last-of-type::after /*look for the last list item in the header nav and add thee unicode value for an arrow*/{
+    content: "\25bc"; /*unicode for an arrow*/
+    padding-left: 4px;
+}
+
+header nav li:hover {
+    opacity: o.8;
+    color: white;
+}
+
+.header-title {
+    text-align: center;
+    padding: 40px;
+    margin: 55px auto 30px;
+}
+
+.header-title h2 {
+    font-size: 55px;
+    line-height: 65px;
+    color: white;
+}
+
+main {
+    display: flex; /*turn the container of main into a flex container*/
+    justify-content: center; /*centre content in the top middle*/
+    flex-wrap: wrap;/*flex box defaults the elements to display in a row, flex warp allows the content to stack as the borwser window shrinks*/
+}
+
+input[type="checkbox"] {
+    width: 12pt;
+    height: 12pt;
+}
+
+input[type="checkbox"]:checked + span::after /*target the input type checkbox when it is selected it will target the span and place it after the span*/ {
+    content: "\2B50"; /*unicode for a checkmark*/
+    position: absolute; /*checkbox will position itself top right of the container*/
+    width: 25px;
+    height: 25px;
+    top: 1px;
+    right: 16px;
+    font-size: 45pt;
+    position: absolute;
+    animation: fadeIn 0.7s; /*link animation to keyframes*/
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}    
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding: 6px 8px; /*TB RL*/
+    border: none;
+}
+
+article {
+    width: 400px;
+    margin: 28px;
+    text-align: left;
+}
+
+article li {
+    padding: 20px;
+}
+
+
+article li:hover {
+    background-color: white;
+}
+
+
+article > h2 {
+    padding: 20pt;
+    text-align: center;
+}
+
+
+article:first-of-type {
+    background-color: #AE7937;
+}
+
+
+.audio-list li {
+    position: relative;
+}
+
+.audio-list li:nth-child(odd) {
+    background-color: #D1A368;
+    padding: 20px;
+}
+
+.audio-list li:hover {
+    background-color: white;
+}
+
+
+#bottom-nav {
+    list-style-type: none;
+}
+
+#bottom-nav-box {
+    background-color: #ffbf8a;
+    padding: 24pt;
+}
+
+.bottom-nav ul li {
+    font-size: 16pt;
+    display: inline; 
+    margin: 30px; 
+    cursor: pointer;
+    padding-bottom: 20pt;
+}
+
+
+#instructions-box {
+    background-color: rgba(25, 24, 53, 0.5);
+    padding: 36pt;
+    margin-top: 75px;
+}
+
+
+.instructions {
+    color: white;
+    text-align: center;
+}
+
+.instructions h3 {
+    font-size: 28pt;
+    line-height: 38pt;
+}
+
+.instructions p {
+    font-size: 24pt;
+    line-height: 38pt;
+    padding-top: 30pt;
+}
+
+#footer-container {
+    background-color: #f1a067;
+    padding: 36pt;
+}
+
+.credits {
+    padding: 18pt;
+}
+
+.credits p {
+    font-size: 16pt;
+    padding: 18pt;
+    line-height: 26pt;
+}
+
+#copy {
+    font-size: 12pt;
+    padding: 18pt;
+}
+
+#footer-nav {
+    list-style-type: none; 
+    margin-top: 45px;
+    display: inline; 
+    margin: 0 8px; 
+    cursor: pointer;
+}
+
+footer nav li:hover {
+    opacity: o.8;
+    color: white;
+}
+
+footer {
+    text-align: center;   
+}
+
+.sticky-footer {
+    position: sticky;
+    top: 100%;
+    height: 80px;
+}
